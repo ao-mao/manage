@@ -122,7 +122,7 @@ export default {
     mounted() {
         getData().then(({ data }) => {
             const { tableData, userDate, orderData,videoData } = data.data
-            console.log(data);
+            console.log(data,'getData');
             this.tableData = tableData
 
             //   获取dom相关的内容，根据vue的生命周期，应该在mounted里进行
@@ -211,7 +211,7 @@ export default {
             };
             echarts3.setOption(echarts3Option)
         })
-
+        console.log('this.tableData',this.tableData);
     }
 }
 </script>
